@@ -1,0 +1,54 @@
+{
+  "name": "gulp-webpack-starter",
+  "version": "1.12.1",
+  "description": "Lightweight production ready Gulp/Webpack starter.",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --production",
+    "clean": "gulp clean",
+    "bem": "bem create $* -l src/components"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ibarakilol/gulp-webpack-starter.git"
+  },
+  "keywords": [
+    "html",
+    "scss",
+    "js",
+    "gulp",
+    "webpack"
+  ],
+  "author": "Ibarakilol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ibarakilol/gulp-webpack-starter/issues"
+  },
+  "homepage": "https://github.com/Ibarakilol/gulp-webpack-starter#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "bem-tools-core": "bem-tools/bem-tools-core",
+    "bem-tools-create": "bem-tools/bem-tools-create",
+    "browser-sync": "^2.26.14",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.2.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "mini-css-extract-plugin": "^1.3.5",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.0",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-stream": "^6.1.2",
+    "yargs": "^13.3.2"
+  }
+}
