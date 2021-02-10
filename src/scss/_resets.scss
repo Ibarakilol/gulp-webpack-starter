@@ -2,13 +2,19 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, ol, ul, dl {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
-  padding: 0;
 }
 
 ol, ul, dl {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+a, button, input, select, textarea {
+  outline: none !important;
 }
 
 a, a:hover {
@@ -16,11 +22,19 @@ a, a:hover {
   text-decoration: none;
 }
 
-a, button, input, select, textarea {
-  outline: none !important;
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.1;
+  text-align: center;
+
+  cursor: pointer;
 }
 
 input:not([type=checkbox]):not([type=radio]), textarea {
+  font-family: inherit;
+  font-size: inherit;
+
   -webkit-appearance: none;
 }
 
