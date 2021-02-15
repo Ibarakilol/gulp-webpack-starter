@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
+}
+
+p {
+  margin: 0 0 17px;
 }
 
 ol, ul, dl {
@@ -28,12 +32,16 @@ button {
   line-height: 1.1;
   text-align: center;
 
+  border: none;
+
   cursor: pointer;
 }
 
 input:not([type=checkbox]):not([type=radio]), textarea {
   font-family: inherit;
   font-size: inherit;
+
+  border: none;
 
   -webkit-appearance: none;
 }
