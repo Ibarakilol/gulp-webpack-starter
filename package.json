@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/Ibarakilol/gulp-webpack-starter#readme",
   "dependencies": {
-    "animate.css": "^4.1.1",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1"
   },
