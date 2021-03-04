@@ -1,6 +1,9 @@
 @import 'resets';
 @import 'variables';
 
+/*======================================================
+Defaults
+======================================================*/
 body {
   min-width: 320px;
 
@@ -14,4 +17,21 @@ body {
 
   position: relative;
   overflow-x: hidden;
+}
+
+/*======================================================
+Container
+======================================================*/
+.wrapper {
+  width: 100%;
+  max-width: $containerwidth;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper-fluid {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
