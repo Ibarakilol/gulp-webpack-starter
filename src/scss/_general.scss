@@ -1,22 +1,23 @@
-@import 'resets';
-@import 'variables';
+@import "resets";
+
+@import "variables";
 
 /*======================================================
 Defaults
 ======================================================*/
 body {
-  min-width: 320px;
+  position: relative;
 
-  font-family: $userfont;
-  font-size: $fontsize;
-  color: $textcolor;
-  line-height: $lineheight;
+  min-width: 320px;
+  overflow-x: hidden;
+
+  color: $text-color;
+  font-size: $font-size;
+  font-family: $user-font;
+  line-height: $line-height;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-
-  position: relative;
-  overflow-x: hidden;
 }
 
 /*======================================================
@@ -24,7 +25,7 @@ Container
 ======================================================*/
 .wrapper {
   width: 100%;
-  max-width: $containerwidth;
+  max-width: $container-width;
   margin: 0 auto;
   padding: 0 15px;
 }
