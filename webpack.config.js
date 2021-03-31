@@ -1,16 +1,16 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   mode: 'production',
   entry: './src/js/index.js',
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist/js'),
+    path: path.resolve(__dirname, 'dist/js')
   },
   resolve: {
     alias: {
-      '%components%': path.resolve(__dirname, 'src/components'),
-    },
+      '%components%': path.resolve(__dirname, 'src/components')
+    }
   },
   module: {
     rules: [
@@ -20,10 +20,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-    ],
-  },
-};
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  }
+}

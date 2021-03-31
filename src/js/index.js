@@ -1,5 +1,5 @@
-import SmoothScroll from 'smooth-scroll';
+import SmoothScroll from 'smooth-scroll'
 
 document.addEventListener('DOMContentLoaded', () => {
-  new SmoothScroll('a[href*="#"]');
-});
+  new SmoothScroll('a[href*="#"]')
+})
