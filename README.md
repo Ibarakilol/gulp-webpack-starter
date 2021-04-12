@@ -1,12 +1,12 @@
 # Production-ready Gulp/Webpack starter
 ## How to use
-* Install [NodeJS](https://nodejs.org/en) (if required)
-* Install ```gulp``` and ```yarn``` globally: ```npm i -g gulp yarn```
-* Download repository using [Git](https://git-scm.com/downloads): ```git clone https://github.com/Ibarakilol/gulp-webpack-starter.git```
-* Navigate to the downloaded folder
-* Download the required dependencies: ```yarn```
-* To begin, enter the command: ```yarn dev```
-* To build the project, enter the command ```yarn build```
+1. Install [NodeJS](https://nodejs.org/en) (if required)
+2. Install ```gulp``` and ```yarn``` globally: ```npm i -g gulp yarn```
+3. Download repository using [Git](https://git-scm.com/downloads): ```git clone https://github.com/Ibarakilol/gulp-webpack-starter.git```
+4. Navigate to the downloaded folder
+5. Download the required dependencies: ```yarn```
+6. To begin, enter the command: ```yarn dev```
+7. To build the project, enter the command ```yarn build```
 
 If you did everything correctly, you should open a browser with a local server. Build mode involves optimizing the project: compressing images, minifying CSS and JS files for uploading to the server.
 
