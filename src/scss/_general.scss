@@ -1,5 +1,5 @@
-@import "resets";
-@import "variables";
+@import 'resets';
+@import 'variables';
 
 /*======================================================
 Defaults
@@ -21,16 +21,9 @@ body {
 /*======================================================
 Container
 ======================================================*/
-.wrapper {
+.container {
   width: 100%;
   max-width: $container-width;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.wrapper-fluid {
-  width: 100%;
-  max-width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }

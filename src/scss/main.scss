@@ -1,11 +1,13 @@
-@import "libs";
-@import "general";
-@import "../components/components";
+@import 'libs';
+@import 'general';
+@import '../components/components';
 
 /*======================================================
 Defaults
 ======================================================*/
-
+p {
+  margin-bottom: 17px;
+}
 
 /*======================================================
 Homepage
