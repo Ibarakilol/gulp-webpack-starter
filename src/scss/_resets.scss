@@ -30,23 +30,23 @@ a {
 button {
   display: inline-block;
 
-  border: 0;
-
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
   line-height: 1.1;
   text-align: center;
 
+  border: 0;
+
   cursor: pointer;
 }
 
 input:not([type=checkbox]):not([type=radio]), textarea {
-  border: 0;
-
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+
+  border: 0;
 
   -webkit-appearance: none;
 }

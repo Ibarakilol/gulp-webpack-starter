@@ -1,15 +1,13 @@
 {
   "name": "gulp-webpack-starter",
-  "version": "1.13.6",
+  "version": "1.14.0",
   "description": "Production-ready Gulp/Webpack starter.",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",
     "clean": "gulp clean",
     "lint": "eslint src/js/index.js",
-    "lint:fix": "eslint src/js/index.js --fix --color",
-    "stylelint": "stylelint src/**/*.scss",
-    "stylelint:fix": "stylelint src/**/*.scss --fix --color"
+    "lint:fix": "eslint src/js/index.js --fix --color"
   },
   "repository": {
     "type": "git",
@@ -51,11 +49,6 @@
     "gulp-sass": "^4.1.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "stylelint": "^13.12.0",
-    "stylelint-config-airbnb": "^0.0.0",
-    "stylelint-config-property-sort-order-smacss": "^7.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.19.0",
     "webpack": "^5.21.1",
     "webpack-cli": "^4.5.0",
     "webpack-stream": "^6.1.2"
@@ -68,9 +61,6 @@
   "lint-staged": {
     "*.js": [
       "yarn lint:fix"
-    ],
-    "*.scss": [
-      "yarn stylelint:fix"
     ]
   }
 }

@@ -15,5 +15,5 @@ If you did everything correctly, you should open a browser with a local server. 
 * [SCSS](https://sass-lang.com) preprocessor
 * [Babel](https://babeljs.io) transpiler to support modern JavaScript (ES6) in browsers
 * [Webpack](https://webpack.js.org) to build JavaScript modules
-* [Airbnb](https://github.com/airbnb) code linting
+* [Airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) code linting
 * Code checking for errors before committing
