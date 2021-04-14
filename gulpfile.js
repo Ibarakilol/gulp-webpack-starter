@@ -55,9 +55,14 @@ function images() {
     .pipe(dest('dist/images/'))
 }
 
+function fonts() {
+  return src('src/fonts/**/*.woff2')
+    .pipe(dest('dist/fonts/'))
+}
+
 function gzip() {
   return src('src/.htaccess')
-    .pipe(dest('dist'))
+    .pipe(dest('dist/'))
 }
 
 function cleandist() {
@@ -78,8 +83,9 @@ function startwatch() {
     'src/js/**/*.js'
   ], scripts)
   watch('src/images/**/*', images)
+  watch('src/fonts/**/*.woff2', fonts)
 }
 
 exports.clean = cleandist
-exports.build = series(cleandist, views, styles, scripts, images, gzip)
-exports.default = parallel(views, styles, scripts, images, browsersync, startwatch)
+exports.build = series(cleandist, views, styles, scripts, images, fonts, gzip)
+exports.default = parallel(views, styles, scripts, images, fonts, browsersync, startwatch)
