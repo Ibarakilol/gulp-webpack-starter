@@ -6,7 +6,7 @@
     "dev": "gulp",
     "build": "gulp build",
     "clean": "gulp clean",
-    "lint": "eslint src/js/index.js",
+    "lint": "eslint src/js/index.js --color",
     "lint:fix": "eslint src/js/index.js --fix --color"
   },
   "repository": {
