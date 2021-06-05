@@ -10,12 +10,12 @@ const webpackStream = require('webpack-stream')
 const imagemin = require('gulp-imagemin')
 const newer = require('gulp-newer')
 const del = require('del')
-const webpackConfig = require('./webpack.config.js')
+const webpackConfig = require('./webpack.config')
 
 function browsersync() {
   browserSync.init({
     server: { baseDir: 'dist/' },
-    port: 4000,
+    // proxy: 'your-local-php-server', // add '<website>/dist' folder as root in settings
     notify: true
   })
 }
@@ -26,6 +26,12 @@ function views() {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(dest('dist/'))
+    .pipe(browserSync.stream())
+}
+
+function phps() {
+  return src('src/**/*.php', { base: './src/' })
     .pipe(dest('dist/'))
     .pipe(browserSync.stream())
 }
@@ -75,6 +81,9 @@ function startwatch() {
     'src/*.html'
   ], views).on('change', browserSync.reload)
   watch([
+    'src/**/*.php'
+  ], phps).on('change', browserSync.reload)
+  watch([
     'src/components/**/*.scss',
     'src/scss/**/*.scss'
   ], styles)
@@ -87,5 +96,5 @@ function startwatch() {
 }
 
 exports.clean = cleandist
-exports.build = series(cleandist, views, styles, scripts, images, fonts, gzip)
-exports.default = parallel(views, styles, scripts, images, fonts, browsersync, startwatch)
+exports.build = series(cleandist, views, phps, styles, scripts, images, fonts, gzip)
+exports.default = parallel(views, phps, styles, scripts, images, fonts, browsersync, startwatch)
