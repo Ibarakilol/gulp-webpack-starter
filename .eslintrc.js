@@ -9,6 +9,7 @@ module.exports = {
     'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
     'quote-props': ['error', 'consistent'],
     'no-new': 'off',
+    'no-plusplus': 'off',
     'object-curly-newline': 'off',
     'semi': ['error', 'never'],
     'comma-dangle': ['error', 'never'],
