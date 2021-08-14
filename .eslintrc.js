@@ -6,7 +6,6 @@ module.exports = {
     node: true
   },
   rules: {
-    'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
     'quote-props': ['error', 'consistent'],
     'no-new': 'off',
     'no-plusplus': 'off',
