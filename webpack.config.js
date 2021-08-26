@@ -1,4 +1,5 @@
 const path = require('path')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -11,6 +12,17 @@ module.exports = {
     alias: {
       '%components%': path.resolve(__dirname, 'src/components')
     }
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          output: {
+            comments: false
+          }
+        }
+      })
+    ]
   },
   module: {
     rules: [

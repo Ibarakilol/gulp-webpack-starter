@@ -29,7 +29,8 @@
   "homepage": "https://github.com/Ibarakilol/gulp-webpack-starter#readme",
   "dependencies": {
     "jquery": "^3.6.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
