@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Title and description ============================================= -->
-  <title>Starter</title>
+  <title>Gulp Webpack Starter</title>
   <meta name="description" content="description no longer than 155 characters">
   <!-- Favicon ============================================================ -->
   <link rel="icon" href="images/favicon.png">
-  <!-- Fonts ============================================================== -->
-  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <!-- CSS ================================================================ -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -22,13 +20,14 @@
   <div class="page">
     <main class="main">
 
-      <h1>Hello, World!</h1>
+
 
     </main><!-- /.main -->
+
+    @@include("./components/footer/footer.html")
+
   </div><!-- /.page -->
 
-  @@include("./components/footer/footer.html")
-
-  <script src="js/app.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>

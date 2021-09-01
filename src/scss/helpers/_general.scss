@@ -5,6 +5,10 @@
 /*======================================================
 Defaults
 ======================================================*/
+html, body {
+  height: 100%;
+}
+
 body {
   position: relative;
 
@@ -20,6 +24,20 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
 }
 
 /*======================================================

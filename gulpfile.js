@@ -49,7 +49,7 @@ function styles() {
 function scripts() {
   return src('src/js/index.js')
     .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(rename('app.min.js'))
+    .pipe(rename('main.min.js'))
     .pipe(dest('dist/js/'))
     .pipe(browserSync.stream())
 }
@@ -59,11 +59,6 @@ function images() {
     .pipe(newer('dist/images/'))
     .pipe(imagemin())
     .pipe(dest('dist/images/'))
-}
-
-function fonts() {
-  return src('src/fonts/**/*.woff2')
-    .pipe(dest('dist/fonts/'))
 }
 
 function gzip() {
@@ -92,9 +87,8 @@ function startwatch() {
     'src/js/**/*.js'
   ], scripts)
   watch('src/images/**/*', images)
-  watch('src/fonts/**/*.woff2', fonts)
 }
 
 exports.clean = cleandist
-exports.build = series(cleandist, views, phps, styles, scripts, images, fonts, gzip)
-exports.default = parallel(views, phps, styles, scripts, images, fonts, browsersync, startwatch)
+exports.build = series(cleandist, views, phps, styles, scripts, images, gzip)
+exports.default = parallel(views, phps, styles, scripts, images, browsersync, startwatch)
