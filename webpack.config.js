@@ -8,11 +8,6 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist/js')
   },
-  resolve: {
-    alias: {
-      '%components%': path.resolve(__dirname, 'src/components')
-    }
-  },
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
