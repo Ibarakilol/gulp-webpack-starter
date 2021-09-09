@@ -18,6 +18,8 @@ a, button, input, select, textarea {
 }
 
 a {
+  display: inline-block;
+
   color: inherit;
   text-decoration: none;
 }
@@ -40,6 +42,7 @@ input:not([type=checkbox]):not([type=radio]), textarea {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+  line-height: inherit;
 
   -webkit-appearance: none;
 }
