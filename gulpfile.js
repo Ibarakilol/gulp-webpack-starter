@@ -83,7 +83,6 @@ function startwatch() {
     'src/scss/**/*.scss'
   ], styles)
   watch([
-    'src/components/**/*.js',
     'src/js/**/*.js'
   ], scripts)
   watch('src/images/**/*', images)
