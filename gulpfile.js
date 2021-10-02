@@ -75,16 +75,12 @@ function startwatch() {
     'src/components/**/*.html',
     'src/*.html'
   ], views).on('change', browserSync.reload)
-  watch([
-    'src/**/*.php'
-  ], phps).on('change', browserSync.reload)
+  watch('src/**/*.php', phps).on('change', browserSync.reload)
   watch([
     'src/components/**/*.scss',
     'src/scss/**/*.scss'
   ], styles)
-  watch([
-    'src/js/**/*.js'
-  ], scripts)
+  watch('src/js/**/*.js', scripts)
   watch('src/images/**/*', images)
 }
 
