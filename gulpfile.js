@@ -49,7 +49,7 @@ function styles() {
 function scripts() {
   return src('src/js/index.js')
     .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(rename('main.min.js'))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(dest('dist/js/'))
     .pipe(browserSync.stream())
 }

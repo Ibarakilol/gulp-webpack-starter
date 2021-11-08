@@ -6,6 +6,7 @@ module.exports = {
   entry: './src/js/index.js',
   output: {
     filename: '[name].js',
+    chunkFilename: '[name].js',
     path: path.resolve(__dirname, 'dist/js')
   },
   optimization: {
@@ -17,7 +18,17 @@ module.exports = {
           }
         }
       })
-    ]
+    ],
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          chunks: 'initial',
+          name: 'vendor',
+          enforce: true
+        }
+      }
+    }
   },
   module: {
     rules: [
