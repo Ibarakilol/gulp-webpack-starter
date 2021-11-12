@@ -2,9 +2,6 @@
 @import '../fonts';
 @import '../variables';
 
-/*======================================================
-Defaults
-======================================================*/
 html, body {
   height: 100%;
 }
@@ -40,12 +37,9 @@ body {
   flex: 0 0 auto;
 }
 
-/*======================================================
-Container
-======================================================*/
-.container {
+.wrapper {
   width: 100%;
-  max-width: $container-width;
+  max-width: $wrapper-width;
   margin: 0 auto;
   padding: 0 15px;
 }
