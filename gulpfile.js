@@ -21,10 +21,13 @@ function browsersync() {
 }
 
 function views() {
-  return src('src/*.html')
+  return src([
+    'src/*.html',
+    'src/pages/**/*.html'
+  ], { base: './src/' })
     .pipe(include({
       prefix: '@@',
-      basepath: '@file'
+      basepath: 'src/'
     }))
     .pipe(dest('dist/'))
     .pipe(browserSync.stream())
@@ -73,6 +76,7 @@ function cleandist() {
 function startwatch() {
   watch([
     'src/components/**/*.html',
+    'src/pages/**/*.html',
     'src/*.html'
   ], views).on('change', browserSync.reload)
   watch('src/**/*.php', phps).on('change', browserSync.reload)
