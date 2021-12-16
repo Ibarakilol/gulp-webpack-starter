@@ -15,7 +15,6 @@ const webpackConfig = require('./webpack.config')
 function browsersync() {
   browserSync.init({
     server: { baseDir: 'dist/' },
-    // proxy: 'your-local-php-server', // add '<website>/dist' folder as root in settings
     notify: true
   })
 }
@@ -29,12 +28,6 @@ function views() {
       prefix: '@@',
       basepath: 'src/'
     }))
-    .pipe(dest('dist/'))
-    .pipe(browserSync.stream())
-}
-
-function phps() {
-  return src('src/**/*.php', { base: './src/' })
     .pipe(dest('dist/'))
     .pipe(browserSync.stream())
 }
@@ -79,7 +72,6 @@ function startwatch() {
     'src/pages/**/*.html',
     'src/*.html'
   ], views).on('change', browserSync.reload)
-  watch('src/**/*.php', phps).on('change', browserSync.reload)
   watch([
     'src/components/**/*.scss',
     'src/scss/**/*.scss'
@@ -89,5 +81,5 @@ function startwatch() {
 }
 
 exports.clean = cleandist
-exports.build = series(cleandist, views, phps, styles, scripts, images, gzip)
-exports.default = parallel(views, phps, styles, scripts, images, browsersync, startwatch)
+exports.build = series(cleandist, views, styles, scripts, images, gzip)
+exports.default = parallel(views, styles, scripts, images, browsersync, startwatch)
