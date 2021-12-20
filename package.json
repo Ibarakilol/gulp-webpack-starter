@@ -1,7 +1,7 @@
 {
   "name": "gulp-webpack-starter",
   "version": "2.4.3",
-  "description": "Production-ready Gulp/Webpack starter.",
+  "description": "Production-ready Gulp, Webpack starter.",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",

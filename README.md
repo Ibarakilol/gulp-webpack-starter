@@ -1,4 +1,4 @@
-# Production-ready Gulp/Webpack starter
+# Production-ready Gulp, Webpack starter
 ## How to use
 1. Install [NodeJS](https://nodejs.org/en) (if required)
 2. Install ```gulp``` and ```yarn``` globally: ```npm i -g gulp yarn```
