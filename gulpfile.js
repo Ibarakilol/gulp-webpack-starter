@@ -1,7 +1,7 @@
 const { src, dest, parallel, series, watch } = require('gulp')
 const browserSync = require('browser-sync').create()
 const include = require('gulp-file-include')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 const autoprefixer = require('gulp-autoprefixer')
 const cleancss = require('gulp-clean-css')
 const rename = require('gulp-rename')
@@ -34,7 +34,7 @@ function views() {
 
 function styles() {
   return src('src/scss/main.scss')
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
     .pipe(cleancss({ level: { 1: { specialComments: 0 } }/*  format: 'beautify' */ }))
     .pipe(rename('style.min.css'))
